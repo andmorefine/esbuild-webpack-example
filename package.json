@@ -6,11 +6,14 @@
   "author": "tanaka.satoshi <tanaka.satoshi@a-tm.co.jp>",
   "license": "MIT",
   "scripts": {
+    "start": "node index.js",
     "esbuild": "esbuild src/index.ts --bundle --target=esnext --outfile=dist/esbuild.js --platform=node",
     "webpack": "webpack"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
     "openai": "^3.2.1"
   },
   "devDependencies": {
