@@ -6,9 +6,10 @@
   "author": "tanaka.satoshi <tanaka.satoshi@a-tm.co.jp>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
-    "esbuild": "esbuild src/index.ts --bundle --target=esnext --outfile=dist/esbuild.js --platform=node",
-    "webpack": "webpack"
+    "esbuild": "esbuild src/index.ts --bundle --target=esnext --outfile=public/dist/esbuild.js --platform=node",
+    "esbuild_exec": "node public/dist/esbuild.js",
+    "webpack": "webpack",
+    "start": "node index.js"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

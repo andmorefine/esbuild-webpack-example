@@ -11,7 +11,7 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-export async function ask(content: string, model = "gpt-3.5-turbo-0301") {
+export async function ask(content: string, model = "gpt-3.5-turbo-0301"): Promise<string> {
   const response = await openai.createChatCompletion({
     model: model,
     messages: [{ role: "user", content: content }],
@@ -19,6 +19,7 @@ export async function ask(content: string, model = "gpt-3.5-turbo-0301") {
 
   const answer = response.data.choices[0].message?.content;
   console.log(answer);
+  return answer || ''
 }
 
 const question = "Final Fantasy XIV の都市「ウルダハ」について教えてください";

@@ -30,7 +30,7 @@ module.exports = {
     new Dotenv()
   ],
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public/dist"),
     filename: "webpack.js",
   },
 };
