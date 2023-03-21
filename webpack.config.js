@@ -1,4 +1,5 @@
 const path = require("path");
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   mode: "development",
@@ -25,6 +26,9 @@ module.exports = {
       path: require.resolve("path-browserify"),
     },
   },
+  plugins: [
+    new Dotenv()
+  ],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "webpack.js",
