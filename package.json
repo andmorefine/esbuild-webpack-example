@@ -1,0 +1,26 @@
+{
+  "name": "esbuild-sample",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "repository": "git@gitlab.ateam.life:tanaka.satoshi/esbuild-sample.git",
+  "author": "tanaka.satoshi <tanaka.satoshi@a-tm.co.jp>",
+  "license": "MIT",
+  "scripts": {
+    "esbuild": "esbuild src/index.ts --bundle --target=esnext --outfile=dist/esbuild.js --platform=node",
+    "webpack": "webpack"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "esbuild": "^0.17.12",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  }
+}
